@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Event" representedClassName="Event" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <userInfo/>
+    </entity>
+    <entity name="Reading" representedClassName="Reading" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="sensor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sensor" inverseName="readings" inverseEntity="Sensor" syncable="YES"/>
+    </entity>
+    <entity name="Sensor" representedClassName="Sensor" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sensorDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="readings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Reading" inverseName="sensor" inverseEntity="Reading" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Event" positionX="-29" positionY="192" width="128" height="58"/>
+        <element name="Reading" positionX="315" positionY="200" width="128" height="88"/>
+        <element name="Sensor" positionX="133" positionY="198" width="128" height="88"/>
     </elements>
 </model>

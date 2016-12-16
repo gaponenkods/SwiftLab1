@@ -22,14 +22,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
+//        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
@@ -45,15 +41,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // If appropriate, configure the new managed object.
         newEvent.timestamp = NSDate()
 
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
+        AppDelegate.saveContext()
     }
 
     // MARK: - Segues
@@ -64,7 +52,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let object = self.fetchedResultsController.object(at: indexPath)
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
@@ -97,15 +85,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if editingStyle == .delete {
             let context = self.fetchedResultsController.managedObjectContext
             context.delete(self.fetchedResultsController.object(at: indexPath))
-                
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+            
+            AppDelegate.saveContext()
         }
     }
 

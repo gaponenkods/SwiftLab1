@@ -14,6 +14,9 @@
 		A5405C561E004F9F00A84C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C541E004F9F00A84C93 /* Main.storyboard */; };
 		A5405C581E004F9F00A84C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5405C571E004F9F00A84C93 /* Assets.xcassets */; };
 		A5405C5B1E004F9F00A84C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C591E004F9F00A84C93 /* LaunchScreen.storyboard */; };
+		A5405C631E0059C000A84C93 /* UtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C621E0059C000A84C93 /* UtilityViewController.swift */; };
+		A5405C651E005A2100A84C93 /* ReadingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C641E005A2100A84C93 /* ReadingTableViewController.swift */; };
+		A5405C671E005A3500A84C93 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C661E005A3500A84C93 /* SensorTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A5405C571E004F9F00A84C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5405C5A1E004F9F00A84C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5405C5C1E004F9F00A84C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5405C621E0059C000A84C93 /* UtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityViewController.swift; sourceTree = "<group>"; };
+		A5405C641E005A2100A84C93 /* ReadingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableViewController.swift; sourceTree = "<group>"; };
+		A5405C661E005A3500A84C93 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +65,26 @@
 			isa = PBXGroup;
 			children = (
 				A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */,
+				A5405C621E0059C000A84C93 /* UtilityViewController.swift */,
+				A5405C641E005A2100A84C93 /* ReadingTableViewController.swift */,
+				A5405C661E005A3500A84C93 /* SensorTableViewController.swift */,
 				A5405C501E004F9F00A84C93 /* MasterViewController.swift */,
 				A5405C521E004F9F00A84C93 /* DetailViewController.swift */,
 				A5405C541E004F9F00A84C93 /* Main.storyboard */,
+				A5405C741E005D3F00A84C93 /* Models */,
 				A5405C571E004F9F00A84C93 /* Assets.xcassets */,
 				A5405C591E004F9F00A84C93 /* LaunchScreen.storyboard */,
 				A5405C5C1E004F9F00A84C93 /* Info.plist */,
 				A5405C4D1E004F9F00A84C93 /* Lab1.xcdatamodeld */,
 			);
 			path = Lab1;
+			sourceTree = "<group>";
+		};
+		A5405C741E005D3F00A84C93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5405C4C1E004F9F00A84C93 /* AppDelegate.swift in Sources */,
+				A5405C671E005A3500A84C93 /* SensorTableViewController.swift in Sources */,
 				A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */,
 				A5405C511E004F9F00A84C93 /* MasterViewController.swift in Sources */,
+				A5405C631E0059C000A84C93 /* UtilityViewController.swift in Sources */,
+				A5405C651E005A2100A84C93 /* ReadingTableViewController.swift in Sources */,
 				A5405C531E004F9F00A84C93 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +330,7 @@
 				A5405C611E004F9F00A84C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
