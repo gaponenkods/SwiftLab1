@@ -9,29 +9,32 @@
 /* Begin PBXBuildFile section */
 		A5405C4C1E004F9F00A84C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */; };
 		A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5405C4D1E004F9F00A84C93 /* Lab1.xcdatamodeld */; };
-		A5405C511E004F9F00A84C93 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C501E004F9F00A84C93 /* MasterViewController.swift */; };
-		A5405C531E004F9F00A84C93 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C521E004F9F00A84C93 /* DetailViewController.swift */; };
 		A5405C561E004F9F00A84C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C541E004F9F00A84C93 /* Main.storyboard */; };
 		A5405C581E004F9F00A84C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5405C571E004F9F00A84C93 /* Assets.xcassets */; };
 		A5405C5B1E004F9F00A84C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C591E004F9F00A84C93 /* LaunchScreen.storyboard */; };
-		A5405C631E0059C000A84C93 /* UtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C621E0059C000A84C93 /* UtilityViewController.swift */; };
-		A5405C651E005A2100A84C93 /* ReadingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C641E005A2100A84C93 /* ReadingTableViewController.swift */; };
-		A5405C671E005A3500A84C93 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C661E005A3500A84C93 /* SensorTableViewController.swift */; };
+		A5F01E8B1E11F9FA0025FB74 /* ReadingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E851E11F9FA0025FB74 /* ReadingTableViewController.swift */; };
+		A5F01E8C1E11F9FA0025FB74 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E871E11F9FA0025FB74 /* SensorTableViewController.swift */; };
+		A5F01E8D1E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E891E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift */; };
+		A5F01E8E1E11F9FA0025FB74 /* UtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E8A1E11F9FA0025FB74 /* UtilityViewController.swift */; };
+		A5F01E901E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E8F1E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift */; };
+		A5F01E9B1E11FDA10025FB74 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F01E9A1E11FDA10025FB74 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5405C481E004F9F00A84C93 /* Lab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5405C4E1E004F9F00A84C93 /* Lab1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lab1.xcdatamodel; sourceTree = "<group>"; };
-		A5405C501E004F9F00A84C93 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		A5405C521E004F9F00A84C93 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A5405C551E004F9F00A84C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5405C571E004F9F00A84C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5405C5A1E004F9F00A84C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5405C5C1E004F9F00A84C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5405C621E0059C000A84C93 /* UtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityViewController.swift; sourceTree = "<group>"; };
-		A5405C641E005A2100A84C93 /* ReadingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableViewController.swift; sourceTree = "<group>"; };
-		A5405C661E005A3500A84C93 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
+		A5F01E851E11F9FA0025FB74 /* ReadingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableViewController.swift; sourceTree = "<group>"; };
+		A5F01E871E11F9FA0025FB74 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
+		A5F01E891E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCoreDataUtilityViewController.swift; sourceTree = "<group>"; };
+		A5F01E8A1E11F9FA0025FB74 /* UtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityViewController.swift; sourceTree = "<group>"; };
+		A5F01E8F1E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionSQLiteUtilityViewController.swift; sourceTree = "<group>"; };
+		A5F01E941E11FD790025FB74 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A5F01E9A1E11FDA10025FB74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F01E9B1E11FDA10025FB74 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +54,7 @@
 			children = (
 				A5405C4A1E004F9F00A84C93 /* Lab1 */,
 				A5405C491E004F9F00A84C93 /* Products */,
+				A5F01E991E11FDA10025FB74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,13 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */,
-				A5405C621E0059C000A84C93 /* UtilityViewController.swift */,
-				A5405C641E005A2100A84C93 /* ReadingTableViewController.swift */,
-				A5405C661E005A3500A84C93 /* SensorTableViewController.swift */,
-				A5405C501E004F9F00A84C93 /* MasterViewController.swift */,
-				A5405C521E004F9F00A84C93 /* DetailViewController.swift */,
 				A5405C541E004F9F00A84C93 /* Main.storyboard */,
-				A5405C741E005D3F00A84C93 /* Models */,
+				A5F01E931E11FD790025FB74 /* SQLiteUtilities */,
+				A5F01E881E11F9FA0025FB74 /* UtilityViewController */,
+				A5F01E841E11F9FA0025FB74 /* ReadingTableViewController */,
+				A5F01E861E11F9FA0025FB74 /* SensorTableViewController */,
 				A5405C571E004F9F00A84C93 /* Assets.xcassets */,
 				A5405C591E004F9F00A84C93 /* LaunchScreen.storyboard */,
 				A5405C5C1E004F9F00A84C93 /* Info.plist */,
@@ -80,11 +83,46 @@
 			path = Lab1;
 			sourceTree = "<group>";
 		};
-		A5405C741E005D3F00A84C93 /* Models */ = {
+		A5F01E841E11F9FA0025FB74 /* ReadingTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A5F01E851E11F9FA0025FB74 /* ReadingTableViewController.swift */,
 			);
-			path = Models;
+			path = ReadingTableViewController;
+			sourceTree = "<group>";
+		};
+		A5F01E861E11F9FA0025FB74 /* SensorTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5F01E871E11F9FA0025FB74 /* SensorTableViewController.swift */,
+			);
+			path = SensorTableViewController;
+			sourceTree = "<group>";
+		};
+		A5F01E881E11F9FA0025FB74 /* UtilityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5F01E8A1E11F9FA0025FB74 /* UtilityViewController.swift */,
+				A5F01E891E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift */,
+				A5F01E8F1E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift */,
+			);
+			path = UtilityViewController;
+			sourceTree = "<group>";
+		};
+		A5F01E931E11FD790025FB74 /* SQLiteUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				A5F01E941E11FD790025FB74 /* BridgingHeader.h */,
+			);
+			path = SQLiteUtilities;
+			sourceTree = "<group>";
+		};
+		A5F01E991E11FDA10025FB74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5F01E9A1E11FDA10025FB74 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,12 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5405C4C1E004F9F00A84C93 /* AppDelegate.swift in Sources */,
-				A5405C671E005A3500A84C93 /* SensorTableViewController.swift in Sources */,
+				A5F01E8E1E11F9FA0025FB74 /* UtilityViewController.swift in Sources */,
+				A5F01E8B1E11F9FA0025FB74 /* ReadingTableViewController.swift in Sources */,
+				A5F01E901E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift in Sources */,
 				A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */,
-				A5405C511E004F9F00A84C93 /* MasterViewController.swift in Sources */,
-				A5405C631E0059C000A84C93 /* UtilityViewController.swift in Sources */,
-				A5405C651E005A2100A84C93 /* ReadingTableViewController.swift in Sources */,
-				A5405C531E004F9F00A84C93 /* DetailViewController.swift in Sources */,
+				A5F01E8D1E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift in Sources */,
+				A5F01E8C1E11F9FA0025FB74 /* SensorTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -307,6 +346,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
