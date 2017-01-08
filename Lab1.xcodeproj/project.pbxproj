@@ -157,7 +157,7 @@
 				TargetAttributes = {
 					A5405C471E004F9F00A84C93 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L6Y39988SY;
+						DevelopmentTeam = 72432WGSUQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -327,10 +327,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L6Y39988SY;
+				DEVELOPMENT_TEAM = 72432WGSUQ;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.SQLLite.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
@@ -341,10 +341,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L6Y39988SY;
+				DEVELOPMENT_TEAM = 72432WGSUQ;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.SQLLite.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;

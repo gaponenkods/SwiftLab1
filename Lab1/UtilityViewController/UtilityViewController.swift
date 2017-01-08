@@ -20,7 +20,7 @@ class UtilityViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         textField.delegate = self
         
-        if isCoreDataRun() { checkSensorsCountCD() } else { /*SQLite*/ }
+        if isCoreDataRun() { checkSensorsCountCD() } else { performSQLite3(); checkSensorsCountSQL() }
     }
     
     func isCoreDataRun() -> Bool {

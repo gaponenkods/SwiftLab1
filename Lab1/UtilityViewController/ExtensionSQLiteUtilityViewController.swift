@@ -39,7 +39,8 @@ extension UtilityViewController {
     
     func fetchSensorsSQL(returnSensors: ([Sensor]?) -> ()) {
 //        A callback (and should) be provided as a closure:
-        let selectSQL = "SELECT name, age FROM people ORDER BY age DESC"
+        let selectSQL = "SELECT sensor_id, name, sensorDescription FROM sensors ORDER BY name DESC"
+        var error
         sqlite3_exec(db, selectSQL,
                      {_, columnCount, values, columns in
                         print("Next record")
@@ -50,6 +51,7 @@ extension UtilityViewController {
                         }
                         return 0
         }, nil, nil)
+        sqlite3_exec(<#T##OpaquePointer!#>, <#T##sql: UnsafePointer<Int8>!##UnsafePointer<Int8>!#>, <#T##callback: ((UnsafeMutableRawPointer?, Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32)!##((UnsafeMutableRawPointer?, Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32)!##(UnsafeMutableRawPointer?, Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32#>, <#T##UnsafeMutableRawPointer!#>, <#T##errmsg: UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>!##UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>!#>)
     }
     
     func regenerateSensorsSQL() {
@@ -57,23 +59,43 @@ extension UtilityViewController {
         //        Create sensors again
         //        sensor name =  "S\(String(format: "%02d", index))"
         
-        let createSQL = "CREATE TABLE sensors (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(50), sensorDescription VARCHAR(50), readings );"
-        sqlite3_exec(db, createSQL, nil, nil, nil)
-        let insertSQL = "INSERT INTO people (name, age) VALUES ('John', \(12));"
-        sqlite3_exec(db, insertSQL, nil, nil, nil)
-        var stmt: OpaquePointer? = nil
+//        SELECT name FROM sqlite_master WHERE type='table' AND name='table_name';
         
-        let selectSQL = "SELECT name, age FROM people ORDER BY age DESC;"
+        let createSensorSQL = "CREATE TABLE sensors " +
+            "(sensor_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            "name VARCHAR(50), " +
+            "sensorDescription VARCHAR(50));"
         
-        sqlite3_prepare_v2(db, selectSQL, -1, &stmt, nil)
+        let createReadingSQL = "CREATE TABLE readings " +
+            "(reading_id INT AUTO_INCREMENT PRIMARY KEY " +
+            "FOREIGN KEY (sensor_id) REFERENCES sensors(sensor_id)" +
+            "value DOUBLE, " +
+            "timestamp INT);"
         
-        while sqlite3_step(stmt) == SQLITE_ROW {
-            let name = String(cString: sqlite3_column_text(stmt, 0))
-            let age = sqlite3_column_int(stmt, 1)
-            print("A person called \(name) is \(age) years old.")
+        sqlite3_exec(db, createSensorSQL, nil, nil, nil)
+        
+        for index in 1...20 {
+            print("Index = \(index)")
+            let insertSQL = "INSERT INTO sensors (name, sensorDescription) VALUES ('S\(String(format: "%02d", index))', 'Sensor number \(index)');"
+            sqlite3_exec(db, insertSQL, nil, nil, nil)
         }
         
+        let stmt: OpaquePointer? = nil
         sqlite3_finalize(stmt)
+        
+//        var stmt: OpaquePointer? = nil
+//        
+//        let selectSQL = "SELECT name, age FROM people ORDER BY age DESC;"
+//        
+//        sqlite3_prepare_v2(db, selectSQL, -1, &stmt, nil)
+//        
+//        while sqlite3_step(stmt) == SQLITE_ROW {
+//            let name = String(cString: sqlite3_column_text(stmt, 0))
+//            let age = sqlite3_column_int(stmt, 1)
+//            print("A person called \(name) is \(age) years old.")
+//        }
+//        
+//        sqlite3_finalize(stmt)
     }
     
 }
