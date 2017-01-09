@@ -8,13 +8,17 @@
 
 import UIKit
 import CoreData
+import SQLite
 
 class UtilityViewController: UIViewController, UITextFieldDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = AppDelegate.sharedDelegate.persistentContainer.viewContext
-    var db: OpaquePointer? = nil
+    
+    var db = try! Connection("\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!)/db.sqlite3")
+    var experimentTime: Date = Date()
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +31,39 @@ class UtilityViewController: UIViewController, UITextFieldDelegate {
         return Bundle.main.bundleIdentifier == "Dmitriy-Gaponenko.Lab1"
     }
     
+    func startGenerating(count: Int) {
+        myprint("\nStart Experiment. Count = \(count)")
+        experimentTime = Date()
+        myprint("start time = \(experimentTime)")
+        
+        if isCoreDataRun() { startGeneratingCD(count: count) } else { startGeneratingSQL(count: count) }
+        
+        let finishTime = Date()
+        myprint("\n")
+        myprint("start time = \(experimentTime)")
+        myprint("finish time = \(finishTime)")
+        myprint("time difference = \(finishTime.timeIntervalSinceReferenceDate - experimentTime.timeIntervalSinceReferenceDate)")
+    }
+    
 //    MARK: - Actions
     
     @IBAction func addButtonAction(_ sender: UIButton) {
         guard let count = Int(textField.text!) else {
             return
         }
-        if isCoreDataRun() { startGeneratingCD(count: count) } else { /*SQLite*/ }
+        startGenerating(count: count)
     }
     
     @IBAction func deleteAllButtonAction(_ sender: UIButton) {
-        if isCoreDataRun() { regenerateSensorsCD() } else { /*SQLite*/ }
+        if isCoreDataRun() { regenerateSensorsCD() } else { regenerateSensorsSQL() }
     }
     
     @IBAction func experimentFirstButtonAction(_ sender: UIButton) {
-        if isCoreDataRun() { startGeneratingCD(count: 1000) } else { /*SQLite*/ }
+        startGenerating(count: 1000)
     }
     
     @IBAction func experimentSecondButtonAction(_ sender: UIButton) {
-        if isCoreDataRun() { startGeneratingCD(count: 1000000) } else { /*SQLite*/ }
+        startGenerating(count: 1000000)
     }
     
     //    MARK: - UITextFieldDelegate
@@ -61,4 +79,11 @@ class UtilityViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    //    MARK: - Print Method
+    
+    func myprint(_ text: String) {
+        textView.text = textView.text + "\n" + text
+    }
+    
 }

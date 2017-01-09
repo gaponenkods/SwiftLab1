@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A503D8F51E22DA1100C92A88 /* SensorModelSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8F41E22DA1100C92A88 /* SensorModelSQL.swift */; };
+		A503D8F71E22DA2900C92A88 /* ReadingModelSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8F61E22DA2900C92A88 /* ReadingModelSQL.swift */; };
 		A5405C4C1E004F9F00A84C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */; };
 		A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5405C4D1E004F9F00A84C93 /* Lab1.xcdatamodeld */; };
 		A5405C561E004F9F00A84C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C541E004F9F00A84C93 /* Main.storyboard */; };
@@ -18,9 +20,14 @@
 		A5F01E8E1E11F9FA0025FB74 /* UtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E8A1E11F9FA0025FB74 /* UtilityViewController.swift */; };
 		A5F01E901E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E8F1E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift */; };
 		A5F01E9B1E11FDA10025FB74 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F01E9A1E11FDA10025FB74 /* libsqlite3.tbd */; };
+		F8624CCC3BA44FB43F272E4F /* Pods_Lab1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9C62EBA05F2204DB3A93B2 /* Pods_Lab1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A9839F35B0DDFCC3C918FD2 /* Pods-Lab1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lab1/Pods-Lab1.debug.xcconfig"; sourceTree = "<group>"; };
+		5C9C62EBA05F2204DB3A93B2 /* Pods_Lab1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A503D8F41E22DA1100C92A88 /* SensorModelSQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModelSQL.swift; sourceTree = "<group>"; };
+		A503D8F61E22DA2900C92A88 /* ReadingModelSQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingModelSQL.swift; sourceTree = "<group>"; };
 		A5405C481E004F9F00A84C93 /* Lab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5405C4E1E004F9F00A84C93 /* Lab1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lab1.xcdatamodel; sourceTree = "<group>"; };
@@ -33,8 +40,8 @@
 		A5F01E891E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCoreDataUtilityViewController.swift; sourceTree = "<group>"; };
 		A5F01E8A1E11F9FA0025FB74 /* UtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityViewController.swift; sourceTree = "<group>"; };
 		A5F01E8F1E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionSQLiteUtilityViewController.swift; sourceTree = "<group>"; };
-		A5F01E941E11FD790025FB74 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		A5F01E9A1E11FDA10025FB74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F7E2912BE5C2DE4D9C684B20 /* Pods-Lab1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lab1/Pods-Lab1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,18 +50,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F01E9B1E11FDA10025FB74 /* libsqlite3.tbd in Frameworks */,
+				F8624CCC3BA44FB43F272E4F /* Pods_Lab1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A503D8F21E22D9D600C92A88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A503D8F31E22D9FE00C92A88 /* SQLiteModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A503D8F31E22D9FE00C92A88 /* SQLiteModels */ = {
+			isa = PBXGroup;
+			children = (
+				A503D8F41E22DA1100C92A88 /* SensorModelSQL.swift */,
+				A503D8F61E22DA2900C92A88 /* ReadingModelSQL.swift */,
+			);
+			path = SQLiteModels;
+			sourceTree = "<group>";
+		};
 		A5405C3F1E004F9F00A84C93 = {
 			isa = PBXGroup;
 			children = (
 				A5405C4A1E004F9F00A84C93 /* Lab1 */,
 				A5405C491E004F9F00A84C93 /* Products */,
 				A5F01E991E11FDA10025FB74 /* Frameworks */,
+				F71724D01DEC7B81AC2B1167 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +97,7 @@
 			children = (
 				A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */,
 				A5405C541E004F9F00A84C93 /* Main.storyboard */,
-				A5F01E931E11FD790025FB74 /* SQLiteUtilities */,
+				A503D8F21E22D9D600C92A88 /* Models */,
 				A5F01E881E11F9FA0025FB74 /* UtilityViewController */,
 				A5F01E841E11F9FA0025FB74 /* ReadingTableViewController */,
 				A5F01E861E11F9FA0025FB74 /* SensorTableViewController */,
@@ -109,20 +135,22 @@
 			path = UtilityViewController;
 			sourceTree = "<group>";
 		};
-		A5F01E931E11FD790025FB74 /* SQLiteUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				A5F01E941E11FD790025FB74 /* BridgingHeader.h */,
-			);
-			path = SQLiteUtilities;
-			sourceTree = "<group>";
-		};
 		A5F01E991E11FDA10025FB74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A5F01E9A1E11FDA10025FB74 /* libsqlite3.tbd */,
+				5C9C62EBA05F2204DB3A93B2 /* Pods_Lab1.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F71724D01DEC7B81AC2B1167 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A9839F35B0DDFCC3C918FD2 /* Pods-Lab1.debug.xcconfig */,
+				F7E2912BE5C2DE4D9C684B20 /* Pods-Lab1.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5405C5F1E004F9F00A84C93 /* Build configuration list for PBXNativeTarget "Lab1" */;
 			buildPhases = (
+				BEC6185CAF8945E8414972D7 /* [CP] Check Pods Manifest.lock */,
 				A5405C441E004F9F00A84C93 /* Sources */,
 				A5405C451E004F9F00A84C93 /* Frameworks */,
 				A5405C461E004F9F00A84C93 /* Resources */,
+				C3C9D582BCD7B36AA2DEBC3D /* [CP] Embed Pods Frameworks */,
+				D184ABEF085A1E67745DF104 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +224,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BEC6185CAF8945E8414972D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C9D582BCD7B36AA2DEBC3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab1/Pods-Lab1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D184ABEF085A1E67745DF104 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lab1/Pods-Lab1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5405C441E004F9F00A84C93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -200,11 +279,13 @@
 			files = (
 				A5405C4C1E004F9F00A84C93 /* AppDelegate.swift in Sources */,
 				A5F01E8E1E11F9FA0025FB74 /* UtilityViewController.swift in Sources */,
+				A503D8F51E22DA1100C92A88 /* SensorModelSQL.swift in Sources */,
 				A5F01E8B1E11F9FA0025FB74 /* ReadingTableViewController.swift in Sources */,
 				A5F01E901E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift in Sources */,
 				A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */,
 				A5F01E8D1E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift in Sources */,
 				A5F01E8C1E11F9FA0025FB74 /* SensorTableViewController.swift in Sources */,
+				A503D8F71E22DA2900C92A88 /* ReadingModelSQL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,12 +406,13 @@
 		};
 		A5405C601E004F9F00A84C93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9839F35B0DDFCC3C918FD2 /* Pods-Lab1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72432WGSUQ;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.SQLLite.Lab1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
@@ -339,12 +421,13 @@
 		};
 		A5405C611E004F9F00A84C93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E2912BE5C2DE4D9C684B20 /* Pods-Lab1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72432WGSUQ;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.SQLLite.Lab1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;

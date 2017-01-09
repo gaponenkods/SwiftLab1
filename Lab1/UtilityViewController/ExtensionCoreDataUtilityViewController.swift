@@ -27,7 +27,7 @@ extension UtilityViewController {
     
     func fetchSensors(returnSensors: ([Sensor]?) -> ()) {
         guard let context = managedObjectContext else {
-            print("Context is nil")
+            myprint("Context is nil")
             return
         }
         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = Sensor.fetchRequest()
@@ -36,13 +36,14 @@ extension UtilityViewController {
             let results = try context.fetch(fetchRequest)
             returnSensors(results as? [Sensor])
         } catch {
-            print("fetch failed UtilityViewController.line.46")
+            myprint("fetch failed UtilityViewController.line.46")
             returnSensors(nil)
         }
     }
     
     func regenerateSensorsCD() {
         
+        myprint("deleting Sensor NSManagedObject")
         fetchSensors { (sensors) in
             if let sensors = sensors {
                 for object in sensors {
@@ -52,9 +53,9 @@ extension UtilityViewController {
         }
         
         AppDelegate.saveContext()
-        
+        myprint("generate new Sensors Models")
         for index in 1...20 {
-            print("Index = \(index)")
+            myprint("Index = \(index)")
             let newSensor = Sensor(context: managedObjectContext!)
             newSensor.name = "S\(String(format: "%02d", index))"
             newSensor.sensorDescription = "Sensor number \(index)"
@@ -89,11 +90,11 @@ extension UtilityViewController {
                     newReading.timestamp = randomTimestamp as NSDate
                     return newReading
                 } else {
-                    print("fetch failed UtilityViewController.line.99")
+                    myprint("fetch failed UtilityViewController.line.99")
                     return nil
                 }
             } catch {
-                print("fetch failed UtilityViewController.line.103")
+                myprint("fetch failed UtilityViewController.line.103")
                 return nil
             }
         }
@@ -103,15 +104,17 @@ extension UtilityViewController {
     //    MARK: - Generating Method By Count
     
     func startGeneratingCD(count: Int) {
-        print("count = \(count)")
+        
         for index in 0...count {
-            print("index = \(index)")
             _ = generateRandomReading()
         }
         AppDelegate.saveContext()
         
+        myprint("\n")
         findMaxAndMinValues()
+        myprint("\n")
         findAvarageValueOfAllReadings()
+        myprint("\n")
         findAvarageValueOfReadingsBySensors()
     }
     
@@ -123,7 +126,8 @@ extension UtilityViewController {
             let sortDescriptionValue = NSSortDescriptor(key: "value", ascending: !isMax)
             fetchRequestValue.sortDescriptors = [sortDescriptionValue]
             let recordValue = try? (managedObjectContext?.fetch(fetchRequestValue))! as [Reading]
-            print("record \(isMax ? "MAX" : "MIN") Value = \(recordValue?.first)")
+            let prettyPrintValue = "\(NSString(format: "%.4f", (((recordValue?.first)! as Reading).value)))"
+            myprint("record \(isMax ? "MAX" : "MIN") Value = \(prettyPrintValue)")
         }
         fetchMax(isMax: true)
         fetchMax(isMax: false)
@@ -145,9 +149,11 @@ extension UtilityViewController {
         
         do {
             let results = try managedObjectContext?.fetch(fetchRequest)
-            print(results?.first ?? "averageValue is nil")
+            let prettyPrintValue = "\(NSString(format: "%.4f", (results?.first as! Dictionary<String, Any>)["averageValues"]! as! Double))"
+            myprint("average Value Of All Readings = " + "\(prettyPrintValue)")
+            
         } catch {
-            print("fetch failed UtilityViewController.line.146")
+            myprint("fetch failed UtilityViewController.line.146")
         }
     }
     
@@ -174,16 +180,16 @@ extension UtilityViewController {
                 let dict = results!.first as! Dictionary<String, Float>
                 if results?.first != nil {
                     if let helpValue = dict["averageValues"] {
-                        let avValue = String(helpValue as Float)
-                        print("averageValue = \(avValue) of Sensor - \(sensorName)")
+//                        let avValue = String(helpValue as Float)
+                        myprint("averageValue = \(NSString(format: "%.4f", helpValue)) of Sensor - \(sensorName)")
                     } else {
-                        print("No Readings in Sensor - \(sensorName)")
+                        myprint("No Readings in Sensor - \(sensorName)")
                     }
                 } else {
-                    print("averageValue is nil")
+                    myprint("averageValue is nil")
                 }
             } catch {
-                print("fetch failed UtilityViewController.line.170")
+                myprint("fetch failed UtilityViewController.line.170")
             }
         }
     }
