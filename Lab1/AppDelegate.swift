@@ -8,20 +8,21 @@
 
 import UIKit
 import CoreData
+import SQLite
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        let navigationController = self.window!.rootViewController as! UINavigationController
-//        let masterController = navigationController.topViewController as! MasterViewController
-//        masterController.managedObjectContext = self.persistentContainer.viewContext
+
         return true
     }
+    
+    // MARK: - SQLite database
+    
+    var db = try! Connection("\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!)/db.sqlite3")
     
     // MARK: - Core Data stack
     
@@ -59,4 +60,8 @@ extension AppDelegate {
         appDelegate.saveContext()
     }
     
+}
+
+func isCoreDataRun() -> Bool {
+    return Bundle.main.bundleIdentifier == "Dmitriy-Gaponenko.Lab1"
 }

@@ -13,8 +13,8 @@ import SQLite
 class UtilityViewController: UIViewController, UITextFieldDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = AppDelegate.sharedDelegate.persistentContainer.viewContext
+    var db = AppDelegate.sharedDelegate.db
     
-    var db = try! Connection("\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!)/db.sqlite3")
     var experimentTime: Date = Date()
     
     @IBOutlet weak var textField: UITextField!
@@ -25,10 +25,6 @@ class UtilityViewController: UIViewController, UITextFieldDelegate {
         textField.delegate = self
         
         if isCoreDataRun() { checkSensorsCountCD() } else { performSQLite3(); checkSensorsCountSQL() }
-    }
-    
-    func isCoreDataRun() -> Bool {
-        return Bundle.main.bundleIdentifier == "Dmitriy-Gaponenko.Lab1"
     }
     
     func startGenerating(count: Int) {
