@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		A503D8F51E22DA1100C92A88 /* SensorModelSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8F41E22DA1100C92A88 /* SensorModelSQL.swift */; };
 		A503D8F71E22DA2900C92A88 /* ReadingModelSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8F61E22DA2900C92A88 /* ReadingModelSQL.swift */; };
+		A503D8F91E24471800C92A88 /* ReadingTableCoreDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8F81E24471800C92A88 /* ReadingTableCoreDataExtension.swift */; };
+		A503D8FB1E24472B00C92A88 /* ReadingTableSQLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8FA1E24472B00C92A88 /* ReadingTableSQLExtension.swift */; };
+		A503D8FE1E24486300C92A88 /* ReadingTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503D8FD1E24486300C92A88 /* ReadingTableModel.swift */; };
 		A5405C4C1E004F9F00A84C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */; };
 		A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5405C4D1E004F9F00A84C93 /* Lab1.xcdatamodeld */; };
 		A5405C561E004F9F00A84C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C541E004F9F00A84C93 /* Main.storyboard */; };
 		A5405C581E004F9F00A84C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5405C571E004F9F00A84C93 /* Assets.xcassets */; };
 		A5405C5B1E004F9F00A84C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5405C591E004F9F00A84C93 /* LaunchScreen.storyboard */; };
+		A59407521E2456C900AA295B /* SensorTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59407511E2456C900AA295B /* SensorTableModel.swift */; };
+		A59407541E24588500AA295B /* SensorTableCoreDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59407531E24588500AA295B /* SensorTableCoreDataExtension.swift */; };
+		A59407561E24589200AA295B /* SensorTableSQLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59407551E24589200AA295B /* SensorTableSQLExtension.swift */; };
 		A5F01E8B1E11F9FA0025FB74 /* ReadingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E851E11F9FA0025FB74 /* ReadingTableViewController.swift */; };
 		A5F01E8C1E11F9FA0025FB74 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E871E11F9FA0025FB74 /* SensorTableViewController.swift */; };
 		A5F01E8D1E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F01E891E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift */; };
@@ -28,6 +34,9 @@
 		5C9C62EBA05F2204DB3A93B2 /* Pods_Lab1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A503D8F41E22DA1100C92A88 /* SensorModelSQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModelSQL.swift; sourceTree = "<group>"; };
 		A503D8F61E22DA2900C92A88 /* ReadingModelSQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingModelSQL.swift; sourceTree = "<group>"; };
+		A503D8F81E24471800C92A88 /* ReadingTableCoreDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableCoreDataExtension.swift; sourceTree = "<group>"; };
+		A503D8FA1E24472B00C92A88 /* ReadingTableSQLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableSQLExtension.swift; sourceTree = "<group>"; };
+		A503D8FD1E24486300C92A88 /* ReadingTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableModel.swift; sourceTree = "<group>"; };
 		A5405C481E004F9F00A84C93 /* Lab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5405C4B1E004F9F00A84C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5405C4E1E004F9F00A84C93 /* Lab1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lab1.xcdatamodel; sourceTree = "<group>"; };
@@ -35,6 +44,9 @@
 		A5405C571E004F9F00A84C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5405C5A1E004F9F00A84C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5405C5C1E004F9F00A84C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A59407511E2456C900AA295B /* SensorTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableModel.swift; sourceTree = "<group>"; };
+		A59407531E24588500AA295B /* SensorTableCoreDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableCoreDataExtension.swift; sourceTree = "<group>"; };
+		A59407551E24589200AA295B /* SensorTableSQLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableSQLExtension.swift; sourceTree = "<group>"; };
 		A5F01E851E11F9FA0025FB74 /* ReadingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableViewController.swift; sourceTree = "<group>"; };
 		A5F01E871E11F9FA0025FB74 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
 		A5F01E891E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCoreDataUtilityViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,7 @@
 		A503D8F21E22D9D600C92A88 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A503D8FC1E24484800C92A88 /* TableViewCellModels */,
 				A503D8F31E22D9FE00C92A88 /* SQLiteModels */,
 			);
 			path = Models;
@@ -72,6 +85,15 @@
 				A503D8F61E22DA2900C92A88 /* ReadingModelSQL.swift */,
 			);
 			path = SQLiteModels;
+			sourceTree = "<group>";
+		};
+		A503D8FC1E24484800C92A88 /* TableViewCellModels */ = {
+			isa = PBXGroup;
+			children = (
+				A503D8FD1E24486300C92A88 /* ReadingTableModel.swift */,
+				A59407511E2456C900AA295B /* SensorTableModel.swift */,
+			);
+			path = TableViewCellModels;
 			sourceTree = "<group>";
 		};
 		A5405C3F1E004F9F00A84C93 = {
@@ -113,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				A5F01E851E11F9FA0025FB74 /* ReadingTableViewController.swift */,
+				A503D8F81E24471800C92A88 /* ReadingTableCoreDataExtension.swift */,
+				A503D8FA1E24472B00C92A88 /* ReadingTableSQLExtension.swift */,
 			);
 			path = ReadingTableViewController;
 			sourceTree = "<group>";
@@ -121,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				A5F01E871E11F9FA0025FB74 /* SensorTableViewController.swift */,
+				A59407531E24588500AA295B /* SensorTableCoreDataExtension.swift */,
+				A59407551E24589200AA295B /* SensorTableSQLExtension.swift */,
 			);
 			path = SensorTableViewController;
 			sourceTree = "<group>";
@@ -281,11 +307,17 @@
 				A5F01E8E1E11F9FA0025FB74 /* UtilityViewController.swift in Sources */,
 				A503D8F51E22DA1100C92A88 /* SensorModelSQL.swift in Sources */,
 				A5F01E8B1E11F9FA0025FB74 /* ReadingTableViewController.swift in Sources */,
+				A59407561E24589200AA295B /* SensorTableSQLExtension.swift in Sources */,
+				A59407521E2456C900AA295B /* SensorTableModel.swift in Sources */,
 				A5F01E901E11FA1B0025FB74 /* ExtensionSQLiteUtilityViewController.swift in Sources */,
 				A5405C4F1E004F9F00A84C93 /* Lab1.xcdatamodeld in Sources */,
+				A503D8F91E24471800C92A88 /* ReadingTableCoreDataExtension.swift in Sources */,
 				A5F01E8D1E11F9FA0025FB74 /* ExtensionCoreDataUtilityViewController.swift in Sources */,
 				A5F01E8C1E11F9FA0025FB74 /* SensorTableViewController.swift in Sources */,
+				A503D8FE1E24486300C92A88 /* ReadingTableModel.swift in Sources */,
 				A503D8F71E22DA2900C92A88 /* ReadingModelSQL.swift in Sources */,
+				A503D8FB1E24472B00C92A88 /* ReadingTableSQLExtension.swift in Sources */,
+				A59407541E24588500AA295B /* SensorTableCoreDataExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +444,7 @@
 				DEVELOPMENT_TEAM = 72432WGSUQ;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.SQL.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
@@ -427,7 +459,7 @@
 				DEVELOPMENT_TEAM = 72432WGSUQ;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.Lab1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitriy-Gaponenko.SQL.Lab1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Lab1/SQLiteUtilities/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
